@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
     <!-- TODO: Include Font Awesome file here -->
+    <!-- Bootstrap 5 does not require Font Awesome for closing the model -->
+
     <!-- TODO: Include Google Fonts file here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
@@ -12,18 +21,81 @@
 
     <script src="scripts/common.js"></script>
     <script src="scripts/index.js"></script>
-    
     <title>ScriBBler</title>
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <div class="header">
-        <input class="topButtons" type="button" value="Sign In">
-        <input class="topButtons" type="button" value="Sign Up">
+        <input class="topButtons" type="button" value="Sign In" data-bs-toggle="modal" data-bs-target="#modelSignIn"
+            id="sign-in-button">
+        <input class="topButtons" type="button" value="Sign Up" data-bs-toggle="modal" data-bs-target="#modelSignUp"
+            id="sign-up-button">
         <a id="pageTitle" class="logo-title">ScriBBler</a>
         <p class="subHeading">Explore, Imagine, Create</p>
-    </div> 
+    </div>
+    <div class="modal fade" id="modelSignUp" tabindex="-1" aria-labelledby="suModelTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="suModelTitle">Get Started</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exInputName1" class="form-label">Enter your Name</label>
+                            <input id="exInputName1" placeholder="Enter your name" type="text" name="suName"
+                                class="form-control" required>
+                            <label for="exInputUserName" class="form-label">Enter your Username</label>
+                            <input id="exInputUserName" placeholder="Enter your username" type="text" name="suUName"
+                                class="form-control" required>
+                            <label for="exInputPassword1" class="form-label">Enter a Password</label>
+                            <input id="exInputPassword1" placeholder="Enter your password" type="password" name="suPwd1"
+                                class="form-control" required>
+                            <label for="exInputPasswordRe" class="form-label">Confirm Password</label>
+                            <input id="exInputPasswordRe" placeholder="Re-enter your password" type="password"
+                                name="suPwd2" class="form-control" required>
+                            <button id="exModalSignUp" class="btn btn-primary" type="submit"
+                                >SignUp</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modelSignIn" tabindex="-1" class="modal fade" aria-labelledby="siModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="siModalTitle">Welcome Back!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exInputUserName2" class="form-label">Enter your Username</label>
+                            <input id="exInputUserName2" placeholder="Enter your username" type="text" name="siUName"
+                                class="form-control" required>
+                            <label for="exInputPassword2" class="form-label">Enter a Password</label>
+                            <input id="exInputPassword2" placeholder="Enter your password" type="password" name="siPwd"
+                                class="form-control" required>
+                        </div>
+                        <button id="exModalSignIn" class="btn btn-primary" type="submit"
+                           >SignIn</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
 </body>
 
-</html>
+/html>
