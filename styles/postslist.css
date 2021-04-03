@@ -50,8 +50,12 @@ body {
     background-color: lightgray;
 }
 .cardTitle {
-    font-weight: 500;
+    font-weight: bold;
+    font-size: large;
     padding-left: 10px;
+    padding-right:10% ;
+    text-align: justify; 
+    display:block;
     color: gray;
 }
 .trashButton {
