@@ -5,21 +5,32 @@
 }
 .controlContainer{
     display: flex;
-    flex-direction: row;
+    width: 100%;
+}
+.postTitle {
+    text-align: center;
 }
 
 .author {
     text-align: left;
-    font-size: medium;
+    font-size: large;
+    margin-right: auto;
     float: left;
 }
 
 .postButton {
     background-color: red;
+    text-align: center;
     color: white;
-    width: 5%;
+    width: 80px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.editButton{
+    margin-left: auto;
 }
 
 .postText {
@@ -33,6 +44,11 @@
 
 .likeContainer {
     display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.likeText {
+    display: flex;
     flex-direction: row;    
 }
 .commentsContainer {
@@ -41,5 +57,10 @@
 }
 .comment {
     border-style: solid;
-    border-width: 5px;
+    border-color: lightgrey;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+
 }
