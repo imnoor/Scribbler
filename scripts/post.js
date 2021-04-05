@@ -35,5 +35,7 @@ function onLiked(){
 }
 
 function addComment(comment) {
-    document.getElementById("idLikeButton").innerHTML += '<p class="comment">'+comment.value+ '</p>';
+    document.getElementById("idAllComments").removeAttribute("style");
+    document.getElementById("idAllComments").innerHTML += '<p class="comment">'+comment.value+ '</p>';
+    comment.value="";
 }
