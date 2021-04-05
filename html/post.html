@@ -32,8 +32,9 @@
     </div>
     <div class="postContainer">
         <h5 id="idPostTitle" class="postTitle"> Everything you should know about ‘module’ & ‘require’ in Node.js</h5>
+        
         <div class="controlContainer">
-            <span class="author">Srishti Gupta</span> <span class="postButton editButton" style="align-self: flex-end;">Edit</span>
+            <span class="author">Srishti Gupta</span> <span id="idEditButton" class="postButton editButton" style="align-self: flex-end;" onclick="editMode()">Edit <i class="fa fa-edit white-color " ></i></span>
         </div>
         <p id="idPostText" class="postText">
             Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some
@@ -42,13 +43,15 @@
         </p>
 
         <div class="likeContainer">
-            <span id="idLikeButton" class="postButton">Like</span>
+            <span id="idLikeButton" class="postButton" onclick="onLiked()"><i class="fa fa-thumbs-up white-color"></i> Like</span>
             <p id="idLikeText" class="likeText">Be the first one to like this!</p>
         </div>
         <div class="commentsContainer">
-            <textarea placeholder="Leave a comment ...."></textarea>
-            <span class="postButton">Comment</span>
-            <p class="comment">this is comment</p>
+            <textarea id="idTxtComment" placeholder="Leave a comment ...."></textarea>
+            <span class="postButton" onclick="addComment(idTxtComment)">Comment</span>
+            <h5 class ="allCommentsText">All Comments</h5>
+            <div id="idAllComments" class="allComments">
+            </div>
         </div>
 
     </div>
